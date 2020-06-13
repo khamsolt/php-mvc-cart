@@ -23,15 +23,15 @@
                     <div class="row">
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-5">
                             <div class="logo pt-39">
-                                <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
+                                <a href="index.php"><img alt="" src="assets/img/logo/logo.png"></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-7 d-none d-lg-block">
                             <div class="main-menu text-center">
                                 <nav>
                                     <ul>
-                                        <li><a href="product-details.html">Товар</a></li>
-                                        <li><a href="basket.html">Корзина</a></li>
+                                        <li><a href="product-details.php">Товар</a></li>
+                                        <li><a href="basket.php">Корзина</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -40,8 +40,8 @@
                             <div class="mobile-menu">
                                 <nav id="mobile-menu-active">
                                     <ul class="menu-overflow">
-                                        <li><a href="product-details.html">Товар</a></li>
-                                        <li><a href="basket.html">Корзина</a></li>
+                                        <li><a href="product-details.php">Товар</a></li>
+                                        <li><a href="basket.php">Корзина</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -50,12 +50,12 @@
                 </div>
             </div>
         </header>
-        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(assets/img/banner/banner-2.jpg);">
+        <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(public/assets/img/banner/banner-2.jpg);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
                     <h2>Product Details</h2>
                     <ul>
-                        <li><a href="index.html">home</a></li>
+                        <li><a href="index.php">home</a></li>
                         <li class="active">Product Details</li>
                     </ul>
                 </div>
@@ -124,5 +124,7 @@
 
 		<!-- all js here -->
         <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/product.js"></script>
     </body>
 </html>
