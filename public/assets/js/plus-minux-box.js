@@ -19,10 +19,34 @@ window.initPlusMinusBox = function () {
                 newVal = 1;
             }
         }
-        $button.parent().find("input").val(newVal).request();
+        $button.parent().find("input").val(newVal).request($button.closest('tr'), newVal);
     });
 };
 
+window.initRemoveLink = () => {
+    $('.product-remove a').click(async event => {
+        let $event = $(event.target);
+        let id = $event.closest('tr').data('id');
+        let response = await $.post('/card/delete', {id}).success(response => response);
+        $event.closest('tbody').html(response);
+        initPlusMinusBox();
+        initRemoveLink();
+    });
+};
+
+
+
 (function ($) {
+
+    $.fn.request = async (context, value) => {
+        let $block = context.closest('tbody');
+        let response = await $.post('/card/quantity', {id: context.data('id'), quantity: value})
+            .success(response => response);
+        $block.html(response);
+        initPlusMinusBox();
+        initRemoveLink();
+    };
+
     initPlusMinusBox();
+    initRemoveLink();
 })(jQuery);
